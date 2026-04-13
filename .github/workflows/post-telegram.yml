@@ -1,7 +1,7 @@
 name: Postar no Telegram 3x por dia - Lucrando em Dólar
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   schedule:
     - cron: '13 10 * * *'
     - cron: '21 16 * * *'
@@ -17,7 +17,7 @@ jobs:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto" \
+          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto" \
           -F chat_id="${CHAT_ID}" \
           -F photo="https://i.postimg.cc/SKMxnSsD/imagem-jpg.jpg" \
           -F caption="🔥 PROMOÇÃO IMPERDÍVEL 🔥
