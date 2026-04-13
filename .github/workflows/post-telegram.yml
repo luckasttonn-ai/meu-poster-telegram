@@ -1,4 +1,4 @@
-name: Postar no Telegram 3x por dia - Lucrando em Dólar 
+name: Postar no Telegram 3x por dia - Lucrando em Dólar
 
 on:
   workflow_dispatch: {}
@@ -12,38 +12,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Enviar post com imagem e texto
-        env:
-          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          CAPTION="🔥 PROMOÇÃO IMPERDÍVEL 🔥
+      - name: Enviar post Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            🔥 PROMOÇÃO IMPERDÍVEL 🔥
 
-💰 R\$397,00
+💰 R$397,00
 
 Comece a ganhar em dólar mesmo sendo iniciante total!
 
 O método Lucrando em Dólar é um treinamento direto ao ponto.
 
-Tudo explicado de forma simples e prática.
+📚 Simples, prático e aplicável.
 
-O que você vai aprender:
+🚀 O que você vai aprender:
 • Como começar do zero
 • Estratégias para ganhar em dólar
 • Passo a passo direto
 • Foco em resultado
 
-Para quem é:
+🎯 Para quem é:
 • Iniciantes
 • Quem não teve resultado
 • Quem quer algo simples
 
-Suporte: afiliados@taynagauche.com
+📩 Suporte: afiliados@taynagauche.com
 
-Acesse agora:
-https://pay.kiwify.com.br/aU1jkB5?afid=t3rSBk7w"
-
-          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto" \
-          -F chat_id="${CHAT_ID}" \
-          -F photo="https://i.postimg.cc/SKMxnSsD/imagem-jpg.jpg" \
-          -F caption="$CAPTION"
+👉 Acesse:
+https://pay.kiwify.com.br/aU1jkB5?afid=t3rSBk7w
