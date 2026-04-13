@@ -1,16 +1,34 @@
-name: Telegram Bot Teste
+name: Postar no Telegram 3x por dia
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '13 10 * * *'
+    - cron: '21 16 * * *'
+    - cron: '19 23 * * *'
 
 jobs:
   post:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Enviar mensagem Telegram
+      - name: Enviar imagem + mensagem
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "🚀 BOT FUNCIONANDO!"
+          message: |
+            🔥 PROMOÇÃO IMPERDÍVEL 🔥
+
+💰 R$397,00
+
+Comece a ganhar em dólar mesmo sendo iniciante total!
+
+Método simples, direto e prático.
+
+📚 Aprenda passo a passo.
+
+🚀 Ideal para iniciantes
+
+👉 Link:
+https://pay.kiwify.com.br/aU1jkB5?afid=t3rSBk7w
