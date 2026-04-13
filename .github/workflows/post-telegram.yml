@@ -1,10 +1,11 @@
 name: Postar no Telegram 3x por dia - Lucrando em Dólar
 
 on:
+  workflow_dispatch:     # ← essa linha permite o botão de teste
   schedule:
-    - cron: '13 10 * * *'   # 7:13 da manhã (BRT)
-    - cron: '21 16 * * *'   # 13:21 da tarde (BRT)
-    - cron: '19 23 * * *'   # 20:19 da noite (BRT)
+    - cron: '13 10 * * *'   # 7:13 BRT
+    - cron: '21 16 * * *'   # 13:21 BRT
+    - cron: '19 23 * * *'   # 20:19 BRT
 
 jobs:
   post:
