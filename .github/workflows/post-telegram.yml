@@ -19,6 +19,6 @@ jobs:
         run: |
           curl -s -X POST https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto \
             -d chat_id=${CHAT_ID} \
-            -d photo="https://raw.githubusercontent.com/luckasttonn-ai/meu-poster-telegram/main/imagem.jpg" \
+            -d photo="https://picsum.photos/800/800"
             -d caption="r$ 397,00 — método lucrando em dólar%0A%0Acomece a ganhar em dólar mesmo sendo iniciante total%0A%0Ao método lucrando em dólar é um treinamento direto ao ponto, prático e acessível, feito para te ajudar a dar os primeiros passos e conquistar suas primeiras comissões em dólar trabalhando pela internet.%0A%0Atudo explicado em videoaulas gravadas, de forma simples, prática e aplicável — sem enrolação.%0A%0Ao que você vai aprender:%0A• como começar do zero no mercado internacional%0A• estratégias práticas para gerar comissões em dólar%0A• passo a passo simples e direto%0A• método focado em execução e resultado%0A%0Apara quem é esse treinamento:%0A• iniciantes que querem ganhar em dólar%0A• quem já tentou e não teve resultado%0A• quem quer um caminho simples e direto para começar%0A%0Asuporte: afiliados@taynagauche.com%0A%0Ahttps://pay.kiwify.com.br/aU1jkB5?afid=t3rSBk7w" \
             -d parse_mode=HTML
