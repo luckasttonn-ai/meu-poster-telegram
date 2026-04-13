@@ -1,4 +1,4 @@
-name: Postar no Telegram 3x por dia - Lucrando em Dólar
+name: Postar no Telegram 3x por dia - Lucrando em Dólar 
 
 on:
   workflow_dispatch: {}
